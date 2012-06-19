@@ -1,0 +1,14 @@
+.test {
+  background: green;
+}
+@media print and (400px:  height) and (400px:  min-width) {
+  .test {
+    background: red;
+  }
+}
+
+@media screen and (400px:  height) and (400px:  min-width) {
+  .test2 {
+    background: yellow;
+  }
+}

@@ -1,0 +1,24 @@
+@import '../compass/stylesheets/respond-to';
+
+$breakpoints: 'mq1' (400px 'height', 400px 'min-width'), 
+              'mq2' 400px 'min-height', 
+              'mq3' 400px 600px, 
+              'mono' monochrome;
+
+$test:  'mq' (700px 900px) (orientation portrait),
+        'mq2' (320px 450px) (none monochrome);
+        
+$bkptz: (400px "height") (400px "min-width");
+
+.test {
+  background: green;
+  @include respond-to('mq1', 'print') {
+    background: red;
+  }
+}
+
+.test2 {
+  @include breakpoint($bkptz) {
+    background: yellow;
+  }
+}
