@@ -1,6 +1,6 @@
 # Respond To
 
-You've always wanted a nice, natural language way to name and remember your breakpoints, and now you can have it! Introducing Respond To, a compass extension giving you the power of a Variable Driven respond-to mixin (https://gist.github.com/2493551) for you to use in your projects now!
+You've always wanted a nice, natural language way to name and remember your breakpoints, and now you can have it! Introducing Respond To, a compass extension giving you the power of a [Variable Driven respond-to mixin](https://gist.github.com/2493551) for you to use in your projects now!
 
 ## Install
 
