@@ -1,0 +1,64 @@
+////////////////////////
+// Import the Breakpoint partial
+////////////////////////
+@import 'breakpoint';
+
+////////////////////////
+// Default the Breakpoints variable
+////////////////////////
+$breakpoints: false !default;
+
+////////////////////////
+// Respond-to API Mixin
+////////////////////////
+@mixin respond-to($context, $media: "screen") {
+  @if $breakpoints != false {
+    // Check to see if the 2nd item is a number. If it is, we've got a single query
+    @if type-of(nth($breakpoints, 2)) == 'number' {
+      // Check to see if the context matches the breakpoint namespace
+      @if $context == nth($breakpoints, 1) {
+        // Call Media Query Generator
+        @include media-query-gen($breakpoints, $media) {
+          @content;
+        }
+      }
+    }
+    // Else, loop over all of them
+    @else {
+      // Loop over each breakpoint and check context
+      @each $bkpt in $breakpoints {
+        // If context is correct…
+        @if $context == nth($bkpt, 1) {
+          // Call the generator!
+          @include media-query-gen($bkpt, $media) {
+            @content;
+          }
+        }
+      }
+    }
+  }
+}
+
+////////////////////////
+// Helper Mixin ebcause this stuff gets used twice
+////////////////////////
+@mixin media-query-gen($bpt, $media) {
+  // Get length of breakpoint variable, minus the namespace
+  $length: length($bpt);
+  // Go through all of the breakpoint items, starting at the second, and add them to a variable to be passed into the media query mixin
+  $mq: false !default;
+  @for $i from 2 through $length {
+    // If it's the first item, override $mq
+    @if $i == 2 {
+      $mq: nth($bpt, $i);
+    }
+    // Else, join $mq
+    @else {
+      $mq: join($mq, nth($bpt, $i));
+    }
+  }
+  // Call Media Query mixin
+  @include breakpoint($mq, $media) {
+    @content;
+  }
+}
