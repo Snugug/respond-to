@@ -41,7 +41,7 @@ $breakpoints: 'full navigation, large' (700px 800px),
 }
 
 .bar {
-  @include respond-to('monochrome screen') {
+  @include respond-to('monochrome screen', 'screen') {
     content: 'Monochrome Screen';
   }
 }
@@ -54,7 +54,7 @@ $breakpoints: 'full navigation, large' (700px 800px),
 ```
 
 ```css
-@media screen and (min-width: 700px) and (max-width: 800px) {
+@media (min-width: 700px) and (max-width: 800px) {
   .foo {
     content: 'Full Navigation, Large';
   }
