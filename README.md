@@ -68,7 +68,7 @@ $breakpoints: 'full navigation, large' (700px 800px),
 
 @media print and (min-width: 700px) and (orientation: portrait) and (monochrome) {
   .baz {
-    content: 'Monochrome Portrait, Wide in Print";
+    content: 'Monochrome Portrait, Wide in Print';
   }
 }
 ```
