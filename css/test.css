@@ -1,13 +1,13 @@
 .test {
   background: green;
 }
-@media print and (400px:  height) and (400px:  min-width) {
+@media print and (min-height: 400px) print and (max-height: 600px) print and (min-width: 400px) {
   .test {
     background: red;
   }
 }
 
-@media screen and (400px:  height) and (400px:  min-width) {
+@media (min-height: 400px) and (max-height: 600px) and (min-width: 400px) {
   .test2 {
     background: yellow;
   }
