@@ -1,6 +1,6 @@
 @import '../compass/stylesheets/respond-to';
 
-$breakpoints: 'mq1' (400px 'height', 400px 'min-width'), 
+$breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width'), 
               'mq2' 400px 'min-height', 
               'mq3' 400px 600px, 
               'mono' monochrome;
@@ -18,7 +18,7 @@ $bkptz: (400px "height") (400px "min-width");
 }
 
 .test2 {
-  @include breakpoint($bkptz) {
+  @include breakpoint((400px 600px "height", 400px "min-width")) {
     background: yellow;
   }
 }
