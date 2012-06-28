@@ -78,6 +78,7 @@ $breakpoints: 'full navigation, large' (700px 800px),
 Both `respond-to` and `breakpoint` do very similar things, in fact, `respond-to` is built on the power of `breakpoint`, but there are a few key differences between the two that are worth pointing out.
 
 * Breakpoint relies on variables for naming whereas respond-to releases on full strings. This means that respond-to's queries can have more descriptive names that breakpoint's.
+* Because Breakpoint works off of variables and Respond-to works off of a list, you can dynamically generate media queries with Respond-to by appending to the `$breakpoints` variable. Variables currently cannot be dynamically built using Sass.
 * Respond-to relies on a single variable to hold all queries whereas breakpoint has a separate variable per query. This means that breakpoint's queries are easier to sightread and version when using the Sass syntax.
 * Both breakpoint and respond-to use the same media query rendering backend, so the core syntax for each query is identical between both of them.
 
