@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
   # General Project Information
   s.name = "respond-to"
-  s.version = "2.0.1"
-  s.date = "2011-06-18"
+  s.version = "2.1"
+  s.date = "2011-07-31"
   s.rubyforge_project = "respond-to"
   s.rubygems_version = "1.7.2"
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2")
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/Snugug/respond-to"
   
   # Project Description
-  s.description = "Easy Media Query Handling"
+  s.description = "Semantic Media Query Handling"
   s.summary = "Use the Variable Driven Respond-to Mixin (https://gist.github.com/2493551) in your project today!"
   
   # Files to Include
@@ -25,5 +25,5 @@ Gem::Specification.new do |s|
   ]
   
   # Dependent Gems
-  s.add_dependency 'breakpoint',    '>= 1.0.1'
+  s.add_dependency 'breakpoint',    '>= 1.1.1'
 end
