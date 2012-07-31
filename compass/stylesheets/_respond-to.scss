@@ -6,16 +6,15 @@
 ////////////////////////
 // Default the Breakpoints variable
 ////////////////////////
-$breakpoints: false !default;
+$breakpoints: () !default;
 
 ////////////////////////
 // Respond-to API Mixin
 ////////////////////////
 @mixin respond-to($context, $media: $breakpoint-default-media) {
-  @if $breakpoints  != false {
+  @if length($breakpoints)  != 0 {
     @each $bkpt in $breakpoints {
       @if $context == nth($bkpt, 1) {
-        @debug $bkpt;
         $length: length($bkpt);
         $mq: false !default;
         
@@ -29,12 +28,15 @@ $breakpoints: false !default;
             $mq: join($mq, nth($bkpt, $i));
           }
         }
-        @debug $mq;
         
         @include breakpoint($mq, $media) {
           @content;
         }
       }
     }
+  }
+  @else {
+    @warn "You haven't created any breakpoints yet! Make some already! See https://github.com/snugug/respond-to#api if you'd like a reminder on how to use Respond-to";
+    @content;
   }
 }
