@@ -22,3 +22,9 @@ $bkptz: (400px "height") (400px "min-width");
     background: yellow;
   }
 }
+
+.test3 {
+  @include respond-to('mq3') {
+    background: purple;
+  }
+}

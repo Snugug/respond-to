@@ -1,7 +1,7 @@
 .test {
   background: green;
 }
-@media print and (min-height: 400px) print and (max-height: 600px) print and (min-width: 400px) {
+@media print and (min-height: 400px) and (max-height: 600px) and (min-width: 400px) {
   .test {
     background: red;
   }
@@ -10,5 +10,11 @@
 @media (min-height: 400px) and (max-height: 600px) and (min-width: 400px) {
   .test2 {
     background: yellow;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 600px) {
+  .test3 {
+    background: purple;
   }
 }
