@@ -6,11 +6,11 @@ You've always wanted a nice, natural language way to name and remember your brea
 
 Respond-to is a Compass extension, so make sure you have [Sass and Compass Installed](http://compass-style.org/install/) in order to use its awesomeness!
 
-Respond-to also requires Sass 3.2, which is currently in pre-release. Respond-to should install Sass 3.2 for you when you install it, but in case you are getting errors, open up your terminal and type the following in:
+Respond-to also requires Sass 3.2, which was just recently released. Respond-to should install Sass 3.2 for you when you install it, but in case you are getting errors, open up your terminal and type the following in:
 
-`gem install sass --pre`
+`gem install sass`
 
-This will install Sass 3.2. If you are compiling with CodeKit, [Chris Coyier has an awesome writeup](http://css-tricks.com/media-queries-sass-3-2-and-codekit/) on how to get CodeKit playing nice with Sass 3.2.
+If you are compiling with CodeKit, [Chris Coyier has an awesome writeup](http://css-tricks.com/media-queries-sass-3-2-and-codekit/) on how to get CodeKit playing nice with Sass 3.2.
 
 ## Install
 
