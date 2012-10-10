@@ -12,7 +12,15 @@ $breakpoints: () !default;
 // Respond-to API Mixin
 ////////////////////////
 @mixin respond-to($context, $media: $breakpoint-default-media) {
+  @if type-of($breakpoints) != 'list' {
+    // Just in case someone writes gibberish to the $breakpoints variable.
+    @warn "Your breakpoints aren't a list! See https://github.com/snugug/respond-to#api if you'd like a reminder on how to use Respond-to";
+  }
   @if length($breakpoints)  != 0 {
+    // If there's only one breakpoint, SASS will think it's a space separated list :P
+    @if length($breakpoints) == 2 and type-of(nth($breakpoints, 1)) != 'list' {
+      $breakpoints: append((), (nth($breakpoints, 1), nth($breakpoints, 2)));
+    }
     @each $bkpt in $breakpoints {
       @if $context == nth($bkpt, 1) {
         $length: length($bkpt);
