@@ -12,7 +12,7 @@ $breakpoints: () !default;
 // Respond-to API Mixin
 ////////////////////////
 
-@mixin respond-to($context, $media: $breakpoint-default-media, $no-query: false) {
+@mixin respond-to($context, $media: $breakpoint-default-media, $no-query: false, $base-font-size: $breakpoint-base-font-size) {
   @if type-of($breakpoints) != 'list' {
     // Just in case someone writes gibberish to the $breakpoints variable.
     @warn "Your breakpoints aren't a list! See https://github.com/snugug/respond-to#api if you'd like a reminder on how to use Respond-to";
@@ -38,7 +38,7 @@ $breakpoints: () !default;
           }
         }
         
-        @include breakpoint($mq, $media, $no-query) {
+        @include breakpoint($mq, $media, $no-query, $base-font-size) {
           @content;
         }
       }
