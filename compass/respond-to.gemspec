@@ -3,8 +3,8 @@
 Gem::Specification.new do |s|
   # General Project Information
   s.name = "respond-to"
-  s.version = "2.1"
-  s.date = "2011-07-31"
+  s.version = "2.6"
+  s.date = "2011-11-03"
   s.rubyforge_project = "respond-to"
   s.rubygems_version = "1.7.2"
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2")
@@ -25,5 +25,5 @@ Gem::Specification.new do |s|
   ]
   
   # Dependent Gems
-  s.add_dependency 'breakpoint',    '>= 1.1.1'
+  s.add_dependency 'breakpoint',    '>= 1.3'
 end
