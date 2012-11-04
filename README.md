@@ -113,7 +113,7 @@ Caviats with Media Query context:
 
 Both Respond-to and Breakpoint do very similar things, in fact, Respond-to is built on the power of Breakpoint, but there are a few key differences between the two that are worth pointing out.
 
-* Breakpoint relies on variables for naming whereas Respond-to releases on full strings. This means that Respond-to's queries can have more descriptive names that Breakpoint's.
+* Breakpoint relies on variables for naming whereas Respond-to releases on full strings. This means that Respond-to's queries can have more descriptive names than Breakpoint's.
 * Because Breakpoint works off of variables and Respond-to works off of a list, you can dynamically generate media queries with Respond-to by appending to the `$breakpoints` variable. Variables currently cannot be dynamically created using Sass, limiting how dynamic media queries can be created using Breakpoint.
 * Respond-to relies on a single variable to hold all queries whereas Breakpoint has separate variables per query. This means that Breakpoint's queries are easier to sightread and version when using the Sass syntax.
 * Both breakpoint and respond-to use the same media query rendering backend, so the core syntax for each query is identical between both of them.
