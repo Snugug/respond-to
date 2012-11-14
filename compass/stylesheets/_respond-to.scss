@@ -35,7 +35,9 @@ $breakpoints: () !default;
           }
           // Else, join $mq
           @else {
-            @if type-of(nth($bkpt, $i)) == 'string' and (is_css_class(nth($bkpt, $i)) or is_css_id(nth($bkpt, $i))) {
+            // Check to see if the variable is a class or ID, thus knowing it
+            // should be a no-query fallback.
+            @if is_class_or_id(nth($bkpt, $i)) {
               $nq: nth($bkpt, $i);
             }
             @else {
@@ -44,6 +46,7 @@ $breakpoints: () !default;
           }
         }
 
+        // If no-query was set within the function, override the default.
         @if $no-query {
           $nq: $no-query;
         }

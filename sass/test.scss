@@ -4,7 +4,7 @@ $breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width') '.no-mq',
               'mq2' (400px 'min-height'),
               'mq3' 400px 600px '.no-mq',
               'mono' monochrome,
-              'mono2' (400px 600px, monochrome) '.no-mq';
+              'mono2' (400px 600px, monochrome) '#no-mq';
 
 $test:  'mq' (700px 900px) (orientation portrait),
         'mq2' (320px 450px) (none monochrome);

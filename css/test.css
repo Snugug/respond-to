@@ -19,7 +19,7 @@
 .no-mq .test3 {
   background: purple;
 }
-@media (min-width: 400px) and (max-width: 600px) {
+@media (min-width: 400px) {
   .test3 {
     background: purple;
   }
@@ -31,7 +31,7 @@
   }
 }
 
-.no-mq .test5 {
+#no-mq .test5 {
   background: purple;
 }
 @media (min-width: 400px) and (max-width: 600px) and (monochrome) {
@@ -40,7 +40,7 @@
   }
 }
 
-.no-mq .test6 {
+#no-mq .test6 {
   background: purple;
 }
 @media (min-width: 400px) and (max-width: 600px) and (monochrome) {
