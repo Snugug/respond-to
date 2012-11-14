@@ -1,6 +1,9 @@
 .test {
   background: green;
 }
+.no-mq .test {
+  background: red;
+}
 @media print and (min-height: 400px) and (max-height: 600px) and (min-width: 400px) {
   .test {
     background: red;
@@ -13,8 +16,35 @@
   }
 }
 
+.no-mq .test3 {
+  background: purple;
+}
 @media (min-width: 400px) and (max-width: 600px) {
   .test3 {
+    background: purple;
+  }
+}
+
+@media (monochrome) {
+  .test4 {
+    background: purple;
+  }
+}
+
+.no-mq .test5 {
+  background: purple;
+}
+@media (min-width: 400px) and (max-width: 600px) and (monochrome) {
+  .test5 {
+    background: purple;
+  }
+}
+
+.no-mq .test6 {
+  background: purple;
+}
+@media (min-width: 400px) and (max-width: 600px) and (monochrome) {
+  .test6 {
     background: purple;
   }
 }

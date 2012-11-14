@@ -1,14 +1,18 @@
 @import '../compass/stylesheets/respond-to';
 
-$breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width'), 
-              'mq2' 400px 'min-height', 
-              'mq3' 400px 600px, 
-              'mono' monochrome;
+$breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width') '.no-mq',
+              'mq2' (400px 'min-height'),
+              'mq3' 400px 600px '.no-mq',
+              'mono' monochrome,
+              'mono2' (400px 600px, monochrome) '.no-mq';
 
 $test:  'mq' (700px 900px) (orientation portrait),
         'mq2' (320px 450px) (none monochrome);
-        
+
 $bkptz: (400px "height") (400px "min-width");
+
+$breakpoint-no-queries: false;
+$breakpoint-no-query-wrappers: true;
 
 .test {
   background: green;
@@ -25,6 +29,24 @@ $bkptz: (400px "height") (400px "min-width");
 
 .test3 {
   @include respond-to('mq3') {
+    background: purple;
+  }
+}
+
+.test4 {
+  @include respond-to('mono') {
+    background: purple;
+  }
+}
+
+.test5 {
+  @include respond-to('mono2') {
+    background: purple;
+  }
+}
+
+.test6 {
+  @include respond-to('mono2') {
     background: purple;
   }
 }
