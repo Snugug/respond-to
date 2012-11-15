@@ -26,7 +26,8 @@ $breakpoints: () !default;
       @if $context == nth($bkpt, 1) {
         $length: length($bkpt);
         $mq: false !default;
-        
+        $nq: false !default;
+
         @for $i from 2 through $length {
           // If it's the first item, override $mq
           @if $i == 2 {
@@ -34,11 +35,23 @@ $breakpoints: () !default;
           }
           // Else, join $mq
           @else {
-            $mq: join($mq, nth($bkpt, $i));
+            // Check to see if the variable is a class or ID, thus knowing it
+            // should be a no-query fallback.
+            @if is_class_or_id(nth($bkpt, $i)) {
+              $nq: nth($bkpt, $i);
+            }
+            @else {
+              $mq: join($mq, nth($bkpt, $i));
+            }
           }
         }
-        
-        @include breakpoint($mq, $media, $no-query, $base-font-size) {
+
+        // If no-query was set within the function, override the default.
+        @if $no-query {
+          $nq: $no-query;
+        }
+
+        @include breakpoint($mq, $media, $nq, $base-font-size) {
           @content;
         }
       }
