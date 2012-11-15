@@ -6,8 +6,11 @@ Compass::Frameworks.register('respond-to', :path => extension_path)
 
 module Sass::Script::Functions
   def is_class_or_id(string)
-    assert_type string, :String
-    Sass::Script::Bool.new(string.start_with?('.', '#'))
+    if string.is_a?(Sass::Script::String)
+      Sass::Script::Bool.new(string.value.start_with?('.', '#'))
+    else
+      Sass::Script::Bool.new(false)
+    end
   end
   declare :is_class_or_id, :args => [:string]
 end

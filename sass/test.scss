@@ -1,7 +1,7 @@
 @import '../compass/stylesheets/respond-to';
 
 $breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width') '.no-mq',
-              'mq2' (400px 'min-height'),
+              'mq2' 400px 'min-height',
               'mq3' 400px 600px '.no-mq',
               'mono' monochrome,
               'mono2' (400px 600px, monochrome) '#no-mq';
