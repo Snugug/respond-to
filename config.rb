@@ -1,5 +1,6 @@
 # Require any additional compass plugins here.
 require 'breakpoint'
+require 'respond-to';
 
 # Sass Scripts!
 

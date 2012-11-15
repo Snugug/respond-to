@@ -1,4 +1,4 @@
-@import '../compass/stylesheets/respond-to';
+@import 'respond-to';
 
 $breakpoints: 'mq1' (400px 600px 'height', 400px 'min-width') '.no-mq',
               'mq2' 400px 'min-height',
