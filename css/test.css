@@ -19,7 +19,7 @@
 .no-mq .test3 {
   background: purple;
 }
-@media (min-width: 400px) {
+@media (min-width: 400px) and (max-width: 600px) {
   .test3 {
     background: purple;
   }
