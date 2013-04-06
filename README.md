@@ -6,7 +6,11 @@ You've always wanted a nice, natural language way to name and remember your brea
 
 The active development of this extension has been moved into [Breakpoint 2.x](https://github.com/Team-Sass/breakpoint).
 
-If you've been using the Respond To gem in your project and have updated the Breakpoint gem to 2.x, you should remove all mentions of the Respond To gem from your project. Please check the following locations and either remove or comment out the lines:
+If you've been using the Respond To gem in your project and have updated the Breakpoint gem to 2.x, you have two options: migrate your project to Breakpoint 2.x or revert to Breakpoint 1.x.
+
+### Mirgrating to Breakpoint 2.x
+
+ you should remove all mentions of the Respond To gem from your project. Please check the following locations and either remove or comment out the lines:
 
 File to check                          | Line to remove
 -------------------------------------- | --------------
@@ -15,6 +19,17 @@ config.rb                              | `require 'respond-to'`
 style.scss (or a partial with imports) | `@import respond-to;`
 
 Then recompile your project and you're good to go!
+
+### Reverting to Breakpoint 1.x
+
+You can use [Bundler](http://gembundler.com/) to keep the Breakpoint gem at version 1.x.
+
+Make sure you require Breakpoint 1.x in your Gemfile:
+
+    gem 'breakpoint', '~>1.3'
+    gem 'respond-to'
+
+Then run `bundle install` from within your project's dir.
 
 ## Requirements
 
