@@ -2,6 +2,20 @@
 
 You've always wanted a nice, natural language way to name and remember your breakpoints, and now you can have it! Introducing Respond-to, a compass extension giving you the power of a [Variable Driven respond-to mixin](https://gist.github.com/2493551) for you to use in your projects now!
 
+## Respond To has been merged into Breakpoint
+
+The active development of this extension has been moved into [Breakpoint 2.x](https://github.com/Team-Sass/breakpoint).
+
+If you've been using the Respond To gem in your project and have updated the Breakpoint gem to 2.x, you should remove all mentions of the Respond To gem from your project. Please check the following locations and either remove or comment out the lines:
+
+File to check                          | Line to remove
+-------------------------------------- | --------------
+Gemfile                                | `gem 'respond-to'`
+config.rb                              | `require 'respond-to'`
+style.scss (or a partial with imports) | `@import respond-to;`
+
+Then recompile your project and you're good to go!
+
 ## Requirements
 
 Respond-to is a Compass extension, so make sure you have [Sass and Compass Installed](http://compass-style.org/install/) in order to use its awesomeness!
