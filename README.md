@@ -41,6 +41,8 @@ Respond-to also requires Sass 3.2, which was just recently released. Respond-to 
 
 If you are compiling with CodeKit, [Chris Coyier has an awesome writeup](http://css-tricks.com/media-queries-sass-3-2-and-codekit/) on how to get CodeKit playing nice with Sass 3.2.
 
+Respond To requires Breakpoint 1.x. See the above section for insructions.
+
 ## Install
 
 `gem install respond-to`
